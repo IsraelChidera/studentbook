@@ -1,0 +1,82 @@
+.showcase {
+    position: relative;
+    margin-top: 0rem;
+}
+
+.showcaseBlock {
+    width: 300px;
+}
+
+.showcaseBlock2 {
+    width: 150px;
+}
+
+.showcaseImg {
+    /* width: ; */
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.showcaseImg img {
+    height: 100vh;
+}
+
+.showcaseImgSection {
+    display: flex;
+    justify-content: space-around;
+}
+
+.showcaseDetails {
+    position: absolute;
+    top: 30%;
+    left: 6rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+.showcaseDetails h1 {
+    font-size: 4rem;
+}
+
+.showcaseTitle2, .showcaseTitle {
+    color: var(--tertiary);
+}
+
+.description {
+    margin-top: 0rem;
+}
+
+.showcaseMedia {
+    margin-left: 6rem;    
+    font-size: 14px;    
+}
+
+.showcaseMedia p {
+    display: inline;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.insta {
+    font-size: 12px;
+    padding-right: 4px;
+}
+
+.showcaseImageCorner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    background: var(--secondary);
+    /* width: 100px; */
+}
+
+.quoteSign {
+    text-align: center;
+    font-size: 3rem;
+}

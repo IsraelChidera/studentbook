@@ -1,0 +1,34 @@
+.how {
+    margin-top: 6rem;
+}
+
+.howtitle {
+    text-align: center;
+}
+
+.howtitle p {
+    font-size: 12px;
+    color: var(--tertiary);
+}
+
+.howtitle h1 {
+    font-size: 2.5rem;
+}
+
+.howGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 6rem;
+    grid-gap: 2rem;
+}
+
+.howGrid .gridBox {
+    text-align: center;
+    padding: 1rem;
+}
+
+.howGrid .gridBox p {
+    color: #efefef;
+    opacity: 0.8;
+    font-size: 14px;
+}
