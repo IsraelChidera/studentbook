@@ -18,13 +18,19 @@
 .howGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 6rem;
-    grid-gap: 2rem;
+    padding: 1rem 12rem;
+    grid-gap: 4rem;
 }
 
 .howGrid .gridBox {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1rem;
+}
+
+.howGrid .gridBox:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .howGrid .gridBox p {
