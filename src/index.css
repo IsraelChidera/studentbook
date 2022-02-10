@@ -16,13 +16,18 @@
 html, body {
   scroll-behavior: smooth;
   line-height: 1.6;
-  background: var(--bg);
   color: #f6f6f6;
+  background: var(--bg);
   font-family: 'Montserrat', sans-serif;
 }
 
 .homepage {
   background: url('./assets/bg.png') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.user {
+  background: var(--primary);
   height: 100vh;
 }
 
