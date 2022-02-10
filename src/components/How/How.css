@@ -1,12 +1,13 @@
 .how {
-    margin-top: 6rem;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
 }
 
 .howtitle {
     text-align: center;
 }
 
-.howtitle p {
+.howtitle p { 
     font-size: 12px;
     color: var(--tertiary);
 }
@@ -18,7 +19,7 @@
 .howGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 12rem;
+    padding: 1rem 14rem;
     grid-gap: 4rem;
 }
 

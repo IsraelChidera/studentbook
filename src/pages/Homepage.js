@@ -5,6 +5,8 @@ import '../index.css';
 import About from '../components/About';
 import Features from '../components/Features';
 import How from '../components/How';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Homepage = () => {
   return <>
@@ -14,6 +16,8 @@ const Homepage = () => {
             < About />
             < Features />
             < How />
+            < Contact />
+            < Footer />
         </div>
   </>;
 };

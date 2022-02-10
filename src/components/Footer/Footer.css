@@ -1,0 +1,12 @@
+footer {
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4rem;
+    font-size: 14px;  
+}
+
+footer div {
+    opacity: 0.8;
+}
