@@ -7,7 +7,7 @@ const index = () => {
     <nav>
         <div className="logo">
             <a href="#">
-                STUDENT BOOK
+                STUDENTBOOK
             </a>
         </div>
 

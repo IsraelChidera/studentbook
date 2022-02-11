@@ -22,11 +22,11 @@
 }
 
 .loginDetailsFlexed h1 {
-    
+    text-align: right;
 }
 
 .loginDetailsFlexed form {
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .loginDetailsFlexed form input[type="text"],
@@ -42,22 +42,21 @@
 }
 
 .formDetails div {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .loginDetailsFlexed form label {
     display: block;
     font-size: 12px;
     margin-bottom: 5px;
+    margin-top: 2rem;
 }
 
 .loginAndRegister {
-    display: flex;
-    justify-content: space-between;
-}
-
-.loginAndRegister button {
-    padding: 10px 6px 10px 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    grid-gap: 5px;
 }
 
 .rememberSpan {
@@ -80,7 +79,7 @@
 .SmLogin p {    
     text-align: center;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .SmLogin p::after {
@@ -119,4 +118,29 @@
 
 .FbBtn {
     margin-left: 1rem;
+}
+
+.loginBtn {
+    padding: 10px 16px 10px 16px;
+    width: 100%;
+    background: var(--tertiary);
+    color: #f6f6f6;
+    border: none;
+    outline: var(--tertiary);
+}
+
+.loginBtn:hover {
+    background: var(--secondary);
+}
+
+.registerBtn {
+    padding: 10px 6px 10px 6px;
+    width: 100%;
+    border: none;
+}
+
+.registerBtn:hover {
+    background: var(--bg);
+    color: #f6f6f6;
+    transition: all 0.3s ease;
 }

@@ -43,7 +43,9 @@ const index = () => {
                             />    
                         </div>
 
-                        <div>
+                        <div
+                            className="rememberAccess"
+                        >
                             <input 
                                 type="checkbox" 
                             />
@@ -55,13 +57,17 @@ const index = () => {
 
                         <div className="loginAndRegister">
                             <div>
-                                <button>                                    
+                                <button
+                                    className="loginBtn"
+                                >                                    
                                     LOGIN
                                 </button>
                             </div>
 
                             <div>
-                                <button>                                    
+                                <button
+                                    className="registerBtn"
+                                >                                    
                                     CREATE ACCOUNT 
                                 </button>
                             </div>

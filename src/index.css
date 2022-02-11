@@ -31,5 +31,8 @@ html, body {
   height: 100vh;
 }
 
-
+.dbGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 

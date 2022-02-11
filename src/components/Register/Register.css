@@ -22,11 +22,11 @@
 }
 
 .registerDetailsFlexed h1 {
-    
+    text-align: right;
 }
 
 .registerDetailsFlexed form {
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
 .registerDetailsFlexed form input[type="text"],
@@ -42,17 +42,23 @@
 }
 
 .formDetails div {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .registerDetailsFlexed form label {
     display: block;
     font-size: 12px;
     margin-bottom: 5px;
+    margin-top: 2rem;
 }
 
 .rememberSpan {
     font-size: 12px;
+}
+
+.rememberAccess {
+    margin-top: 10px;
+    text-align: right;
 }
 
 .registerTitle, .registerTitle2 {
@@ -71,7 +77,7 @@
 .Smregister p {    
     text-align: center;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .Smregister p::after {
@@ -102,12 +108,25 @@
 }
 
 .SmregisterFlexed button:hover {
-    background: var(--bg);
+    background: var(--primary);
     color: #f6f6f6;
     transition: all 0.2s ease-in;
-    
 }
 
 .FbBtn {
     margin-left: 1rem;
+}
+
+.signUpBtn button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: var(--tertiary);
+    color: #f6f6f6;
+    outline: var(--tertiary);
+    border: none;
+}
+
+.signUpBtn button:hover {
+    background: var(--secondary);
 }

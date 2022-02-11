@@ -52,7 +52,7 @@ const index = () => {
                             />    
                         </div>
 
-                        <div>
+                        <div className="rememberAccess">
                             <input 
                                 type="checkbox" 
                             />
@@ -60,6 +60,12 @@ const index = () => {
                             <span className="rememberSpan">
                                 Remember Me
                             </span>
+                        </div>
+
+                        <div className="signUpBtn">
+                            <button>
+                                Sign Up
+                            </button>
                         </div>
                     </div>
 

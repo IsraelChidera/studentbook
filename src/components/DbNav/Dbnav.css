@@ -1,0 +1,26 @@
+.dbnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background: var(--primary);
+}
+
+.dbProfile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.dbID {
+    padding-right: 10px;
+}
+
+.dbProfile form input {
+    border: none;
+    border-bottom: 2px solid #334;
+    background: none;
+    outline: transparent;
+    color: #f6f6f6;
+    padding: 0 5px 0 0;
+}
