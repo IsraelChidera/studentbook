@@ -1,8 +1,6 @@
 .dbSidebar {
     background: var(--primary);
-    height: 90vh;
-    position: fixed;
-    /* top: 0; */
+    height: 90vh;       
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,7 +20,6 @@
 
 .dbSidebar ul li a:hover {
     color: var(--tertiary);
-    opacity: 0.6;
 }
 
 .icon {
