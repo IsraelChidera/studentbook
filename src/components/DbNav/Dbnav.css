@@ -3,6 +3,12 @@
     justify-content: space-between;
     padding: 1rem 4rem;
     background: var(--primary);
+    padding-left: 138px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .dbProfile {

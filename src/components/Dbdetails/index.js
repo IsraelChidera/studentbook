@@ -15,10 +15,10 @@ const index = () => {
             <div className="dbDetailsContainer">
                 <div className="dbDetailsTitle">
                     <h1>
-                        Welcome Back
+                        Welcome, Israel
                     </h1>
                     <p>
-                        What is on your mind?
+                        What are your plans for today?
                     </p>
                 </div>
 
@@ -73,7 +73,7 @@ const index = () => {
                     <div className="dbReviews">
                         <div>
                             <p>
-                                You have added 0 reviews
+                                You have added 0 reviews ( feature not available!!! )
                             </p>
                         </div>
                     </div>

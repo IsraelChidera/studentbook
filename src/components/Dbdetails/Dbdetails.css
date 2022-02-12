@@ -1,7 +1,9 @@
 .dbDetailsGrid {
-    padding: 2rem 1rem 0 2rem;    
+    padding: 2rem 1rem 2rem 2rem;    
     display: flex;
     justify-content: space-between;
+    margin-left: 210px;
+    padding-top: 6.5rem;
 }
 
 .dbDetailsTitle {
@@ -34,6 +36,10 @@
 .dbCourses h3 {
     margin-bottom: 5px;
     font-size: 18px;
+}
+
+.reminder p {
+    font-size: 14px;
 }
 
 .dbMaterials {
@@ -80,17 +86,24 @@
 }
 
 .dbDetailsContainer {
-    flex: 3;
-    margin-right: 2rem;
+    flex: 4;
+    margin-right: 4rem;
 }
 
 .reminder {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+    border-left: 2px solid #f6f6f6;
+    padding-left: 2rem;
 }
 
 .reminder-icon {
+    font-size: 12px;
+}
+
+.dbReviews p {
     font-size: 14px;
+    margin-top: 2rem;
 }

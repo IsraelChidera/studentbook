@@ -32,7 +32,7 @@ html, body {
 }
 
 .dbGrid {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+  /* display: grid;
+  grid-template-columns: 1fr 5fr; */
 }
 
