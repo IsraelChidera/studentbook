@@ -11,6 +11,15 @@
     z-index: 1;
 }
 
+.dbnav a {
+    color: #f6f6f6;
+    text-decoration: none;
+}
+
+.dbnav a:hover {
+    cursor: pointer;
+}
+
 .dbProfile {
     display: flex;
     justify-content: space-between;

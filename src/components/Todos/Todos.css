@@ -1,0 +1,61 @@
+.todoDetails {
+    padding-top: 6.5rem;
+    /* display: flex; */
+}
+
+.todoTodo {
+    margin-left: 210px;
+    padding: 2rem 2rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 3rem;
+}
+
+.todoTodo form input {
+    padding: 10px 2px 10px 5px;
+    width: 100%;
+    outline: transparent;
+}
+
+.todoTodo form select {
+    padding: 10px 2px 10px 5px;
+    width: 100%;
+    outline: transparent;
+}
+
+.todoTodo form button {
+    padding: 10px 10px 10px 10px;
+    background: var(--tertiary);
+    border: none;
+    color: #f6f6f6;
+}
+
+.todoTodo form button:hover {
+    background: var(--secondary);
+    color: #fff;
+    cursor: pointer;
+}
+
+.todoTodo form div {
+    margin: 1rem 0;
+}
+
+.todoTodo form {
+    margin-top: 2rem;
+}
+
+.todoTodo form label {
+    font-size: 14px;
+    display: block;
+    padding-bottom: 8px;
+    margin-top: 1rem;
+}
+
+.todoTodoTitle p {
+    font-size: 14px
+}
+
+.todoResultsDiv {
+    background: var(--primary);
+    padding: 1rem;
+}

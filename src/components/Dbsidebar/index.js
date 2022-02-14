@@ -4,30 +4,39 @@ import { GiBookshelf } from 'react-icons/gi';
 import { MdLibraryBooks } from 'react-icons/md';
 import { MdRateReview } from 'react-icons/md';
 import { FaClipboardList } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+import { MdDashboardCustomize } from "react-icons/md";
 
 const index = () => {
   return (
         <section className="dbSidebar">
             <ul>
                 <li>
-                    <a href="#">
+                   
+                        < MdDashboardCustomize className="icon" /> {" "}
+                        My Dashboard
+                    
+                </li>
+
+                <li>
+                    <Link to="/dashboard/courses">
                         < GiBookshelf className="icon" /> {" "}
                         My courses
-                    </a>
+                    </Link>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <Link to="/dashboard/materials">
                         < MdLibraryBooks className="icon" /> {" "}
                         My Materials
-                    </a>
+                    </Link>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <Link to="/dashboard/todos">
                         < FaClipboardList className="icon"/> {" "}
                         Todo List
-                    </a>
+                    </Link>
                 </li>
 
                 <li>

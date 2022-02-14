@@ -1,0 +1,50 @@
+.coursesDetails {
+    padding-top: 6.5rem;
+    /* display: flex; */
+}
+
+.coursesTodo {
+    margin-left: 210px;
+    padding: 2rem 2rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 3rem;
+}
+
+.coursesTodo form input {
+    padding: 10px 2px 10px 5px;
+    width: 100%;
+    outline: transparent;
+}
+
+.coursesTodo form select {
+    padding: 10px 2px 10px 5px;
+    width: 100%;
+    outline: transparent;
+}
+
+.coursesTodo form button {
+    padding: 10px 10px 10px 10px;
+    background: var(--tertiary);
+    border: none;
+    color: #f6f6f6;
+}
+
+.coursesTodo form button:hover {
+    background: var(--secondary);
+    color: #fff;
+    cursor: pointer;
+}
+
+.coursesTodo form div {
+    margin: 1rem 0;
+}
+
+.coursesTodoTitle p {
+    font-size: 14px
+}
+
+.courseResultsDiv {
+    background: var(--primary);
+    padding: 1rem;
+}

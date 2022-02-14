@@ -1,14 +1,15 @@
 import React from 'react';
 import './Navbar.css';
 import '../../index.css';
+import { Link } from 'react-router-dom';
 
 const index = () => {
   return (
     <nav>
         <div className="logo">
-            <a href="#">
+            <Link to="/">
                 STUDENTBOOK
-            </a>
+            </Link>
         </div>
 
         <ul>
