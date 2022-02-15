@@ -11,7 +11,7 @@ const index = () => {
             <div className="dbGrid materialsDetails">
                 < Dbsidebar />
                 <div className="materialsTodo">
-                    <div>
+                    <div> 
                         <input type="file"/>                        
                     </div>
 

@@ -11,11 +11,11 @@ const index = () => {
   return (
         <section className="dbSidebar">
             <ul>
-                <li>
-                   
+                <li>                                   
+                    <Link to="/dashboard">
                         < MdDashboardCustomize className="icon" /> {" "}
                         My Dashboard
-                    
+                    </Link>
                 </li>
 
                 <li>

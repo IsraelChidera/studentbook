@@ -5,6 +5,7 @@ import Materials from './components/Materials';
 import Todos from './components/Todos';
 import { Route, Routes } from 'react-router-dom';
 import User from './pages/User';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/dashboard/courses" element={ < Courses />  } />
         <Route path="/dashboard/materials" element={ < Materials />  } />
         <Route path="/dashboard/todos" element={ < Todos />  } />
-        <Route path="/dashboard" element={ < Dashboard />  } />        
+        <Route path="/dashboard" element={ < Dashboard />  } />  
+        <Route path="/register" element={ < Register />  } />        
       </Routes>
        
     </>

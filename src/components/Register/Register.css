@@ -52,6 +52,12 @@
     margin-top: 2rem;
 }
 
+.registerDetailsFlexed a {
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+
 .rememberSpan {
     font-size: 12px;
 }

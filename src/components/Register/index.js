@@ -3,6 +3,7 @@ import './Register.css';
 import userAccessBg from '../../assets/userBg.png';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const index = () => {
   return (
@@ -18,9 +19,11 @@ const index = () => {
         <div className="registerFlexed">
             <div className="registerDetailsFlexed">
                 <h1>
-                    STUDENT
-                    <span className="registerTitle">BOOK</span>
-                    <span className="registerTitle2">.</span>
+                    <Link to="/">
+                        STUDENT
+                        <span className="registerTitle">BOOK</span>
+                        <span className="registerTitle2">.</span>
+                    </Link>
                 </h1>
 
                 <form>

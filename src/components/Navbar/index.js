@@ -1,14 +1,21 @@
 import React from 'react';
 import './Navbar.css';
 import '../../index.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const index = () => {
+const Navbar = () => {
+    const navigate = useNavigate();
+    const handleClick = (e) => {
+        console.log("Yes")
+        navigate("/register");
+    }
   return (
     <nav>
         <div className="logo">
             <Link to="/">
-                STUDENTBOOK
+                STUDENT
+                <span className="showcaseTitle">BOOK</span>
+                <span className="showcaseTitle2">.</span>
             </Link>
         </div>
 
@@ -35,19 +42,22 @@ const index = () => {
         <div className="clientLogin">
             <ul>
                 <li>
-                    <a href="#">
+                    <Link to="/user-access">
                         Login
-                    </a>
+                    </Link>
                 </li>
             </ul>
 
-            <button className="signupBtn">
-                Sign up
+            <button
+                onClick={handleClick} 
+                className="signupBtn"
+            >
+                Sign Up
             </button>
         </div>
     </nav>
   );
 };
 
-export default index;
+export default Navbar;
 

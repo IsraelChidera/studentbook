@@ -21,6 +21,11 @@
     /* margin-left: 4rem; */
 }
 
+.loginDetailsFlexed a {
+    color: #f6f6f6;
+    text-decoration: none;
+}
+
 .loginDetailsFlexed h1 {
     text-align: right;
 }

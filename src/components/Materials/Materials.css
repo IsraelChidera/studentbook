@@ -1,9 +1,16 @@
 .materialsDetails {
     padding-top: 6.5rem;
     /* display: flex; */
-}
+} 
 
 .materialsTodo {
-    margin-left: 210px;
+    margin-left: 230px;
+    margin-right: 230px;
     padding: 2rem 2rem 2rem 2rem;
+    border: 1px dotted #fff;
+}
+
+.materialsTodo p {
+    padding-top: 1rem;
+    font-size: 14px;
 }

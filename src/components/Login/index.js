@@ -3,8 +3,15 @@ import './Login.css';
 import userAccessBg from '../../assets/userBg.png';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 
-const index = () => {
+const Index = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/register")
+    }
+
   return (
     <section className="login">
         <div
@@ -18,9 +25,11 @@ const index = () => {
         <div className="loginFlexed">
             <div className="loginDetailsFlexed">
                 <h1>
-                    STUDENT
-                    <span className="loginTitle">BOOK</span>
-                    <span className="loginTitle2">.</span>
+                    <Link to="/">
+                        STUDENT
+                        <span className="loginTitle">BOOK</span>
+                        <span className="loginTitle2">.</span>
+                    </Link>
                 </h1>
 
                 <form>
@@ -66,6 +75,7 @@ const index = () => {
 
                             <div>
                                 <button
+                                    onClick={handleClick}
                                     className="registerBtn"
                                 >                                    
                                     CREATE ACCOUNT 
@@ -105,4 +115,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
