@@ -1,7 +1,7 @@
 .dbnav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     background: var(--primary);
     padding-left: 138px;
     position: fixed;
@@ -38,4 +38,23 @@
     outline: transparent;
     color: #f6f6f6;
     padding: 0 5px 0 0;
+    margin-right: ;
+}
+
+.dbLogout {
+    padding-left: 10px;
+}
+
+.dbLogout button {
+    padding: 10px 15px 10px 15px;
+    background: var(--tertiary);
+    color: #f6f6f6;
+    border: none;
+}
+
+.dbLogout button:hover {
+    background: var(--secondary);
+    color: #f6f6f6;
+    opacity: 0.8;
+    transition: 0.3s all ease;
 }

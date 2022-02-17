@@ -34,6 +34,12 @@ const index = () => {
                         />
                     </form>
                 </div>
+
+                <div className="dbLogout">
+                    <button>
+                        Logout
+                    </button>
+                </div>
             </div>
         </section>
     );

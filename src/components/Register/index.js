@@ -1,106 +1,154 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Register.css';
 import userAccessBg from '../../assets/userBg.png';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { registerInitiate } from '../../redux/actions';
 
-const index = () => {
-  return (
-    <section className="register">
-        <div
-            style={{
-                backgroundImage: `url(${userAccessBg})`          
-            }}
-            className="registerImg"
-        >
-        </div>
+const Index = () => {
+    const [state, setState] = useState({
+        displayName: "",
+        email: "",
+        password: ""
+    });
 
-        <div className="registerFlexed">
-            <div className="registerDetailsFlexed">
-                <h1>
-                    <Link to="/">
-                        STUDENT
-                        <span className="registerTitle">BOOK</span>
-                        <span className="registerTitle2">.</span>
-                    </Link>
-                </h1>
+    const { currentUser } = useSelector((state) => state.user);
 
-                <form>
-                    <div className="formDetails">
-                        <div>
-                            <label>
-                                Full Name
-                            </label>
-                            <input
-                                type="text"                            
-                            />    
-                        </div>
+    const navigate = useNavigate();
 
-                        <div>
-                            <label>
-                                Email
-                            </label>
-                            <input
-                                type="email"                            
-                            />    
-                        </div>
+    useEffect(() => {
+        if(currentUser) {
+            navigate("/dashboard")
+        }
+    }, [currentUser, navigate])
 
-                        <div>
-                            <label>
-                                Password
-                            </label>
-                            <input
-                                type="password"                            
-                            />    
-                        </div>
+    const dispatch = useDispatch(); 
+    const {displayName, email, password} = state;
 
-                        <div className="rememberAccess">
-                            <input 
-                                type="checkbox" 
-                            />
-                            {" "}
-                            <span className="rememberSpan">
-                                Remember Me
-                            </span>
-                        </div>
+    const handleChange = (e) => {
+        let {name, value} = e.target;
+        setState({...state, [name]: value});
+    }
 
-                        <div className="signUpBtn">
-                            <button>
-                                Sign Up
-                            </button>
-                        </div>
-                    </div>
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(registerInitiate(email, password, displayName)) 
+        setState({email: "", displayName: "", password: ""})
+    }
 
-                    
-
-                    <div className="Smregister">
-                        <p>
-                            or
-                        </p>
-                        <div className="SmregisterFlexed">
-                            <div>
-                                <button>
-                                    < FcGoogle /> {" "}
-                                    Continue With Google
-                                </button>
-                            </div>
-
-                            <div>
-                                <button
-                                    className="FbBtn"
-                                >
-                                    < FaFacebookF /> {" "}
-                                    Continue With Facebook
-                                </button>
-                            </div>
-                        </div>
-                    </div>    
-                </form>
+    return (
+        <section className="register">
+            <div
+                style={{
+                    backgroundImage: `url(${userAccessBg})`          
+                }}
+                className="registerImg"
+            >
             </div>
-        </div>
-    </section>
-  );
+
+            <div className="registerFlexed">
+                <div className="registerDetailsFlexed"> 
+                    <h1>
+                        <Link to="/">
+                            STUDENT
+                            <span className="registerTitle">BOOK</span>
+                            <span className="registerTitle2">.</span>
+                        </Link>
+                    </h1>
+
+                    <form
+                        onSubmit={handleSubmit}
+                    >
+                        <div className="formDetails">
+                            <div>
+                                <label>
+                                    Full Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="displayName"
+                                    onChange={handleChange}   
+                                    value={displayName}   
+                                    required                      
+                                />    
+                            </div>
+
+                            <div>
+                                <label>
+                                    Email
+                                </label>
+                                <input
+                                    type="email"    
+                                    name="email"
+                                    onChange={handleChange}   
+                                    value={email} 
+                                    required                       
+                                />    
+                            </div>
+
+                            <div> 
+                                <label>
+                                    Password
+                                </label>
+                                <input
+                                    type="password"    
+                                    name="password"
+                                    onChange={handleChange}   
+                                    value={password}
+                                    required                        
+                                />    
+                            </div>
+
+                            <div className="rememberAccess">
+                                <input 
+                                    type="checkbox" 
+                                    required
+                                />
+                                {" "}
+                                <span className="rememberSpan">
+                                    Remember Me
+                                </span>
+                            </div>
+
+                            <div className="signUpBtn">
+                                <button                                    
+                                >
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+
+                        
+
+                        <div className="Smregister">
+                            <p>
+                                or
+                            </p>
+                            <div className="SmregisterFlexed">
+                                <div>
+                                    <button>
+                                        < FcGoogle /> {" "}
+                                        Sign up With Google
+                                    </button>
+                                </div>
+
+                                <div>
+                                    <button
+                                        className="FbBtn"
+                                    >
+                                        < FaFacebookF /> {" "}
+                                        Sign up With Facebook
+                                    </button>
+                                </div>
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </section>
+    );
 };
 
-export default index;
+export default Index;
