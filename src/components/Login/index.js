@@ -1,26 +1,50 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Login.css';
 import userAccessBg from '../../assets/userBg.png';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { loginInitiate } from '../../redux/actions';
 
 const Index = () => {
     const [state, setState] = useState({
         email: "",
         password: ""
     });
+    
+    const { currentUser } = useSelector((state) => state.user);
 
-    const {email, password} = state;
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if(currentUser) {
+            navigate("/dashboard")
+        }
+    }, [currentUser, navigate])
+
+    const dispatch = useDispatch(); 
+ 
+    const {email, password} = state;
 
     const handleClick = () => {
         navigate("/register")
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
+        if(!email || !password){
+            return;
+        }
+
+        dispatch(loginInitiate(email, password))
+        setState({email: "", password: ""})
+    }
+
+    const handleChange = (e) => {
+        let {name, value} = e.target;
+        setState({...state, [name]: value});
     }
 
     const handleGoogleSignIn = () => {
@@ -28,10 +52,6 @@ const Index = () => {
     }
 
     const handleFacebookSignIn = () => {
-
-    }
-
-    const handleChange = () => {
 
     }
 

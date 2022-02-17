@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 import { auth } from '../firebase';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 
 
 // Creating all actions related to registering a user
@@ -18,20 +18,47 @@ const registerFail = (error) => ({
     payload: error,
 });
 
+// Creating actions for logging in users
+const loginStart = () => ({
+    type: types.LOGIN_START,
+});
+
+const loginSuccess = (user) => ({
+    type: types.LOGIN_SUCCESS,
+    payload: user,
+});
+
+const loginFail = (error) => ({
+    type: types.LOGIN_FAIL,
+    payload: error,
+});
+
 // dispatching the actions to be used by all aspects of the app
 export const registerInitiate = (email, password, displayName) => {
     return function (dispatch) {
         dispatch(registerStart());
         createUserWithEmailAndPassword(auth, email, password)
-            .then((user) => {
-                // user.updateProfile({
-                //     displayName
-                // })
+            .then((user) => {                
                 updateProfile(auth.currentUser, {
                     displayName
                 })
                 dispatch(registerSuccess(user))
             })
             .catch((error) => dispatch(registerFail(error.message)))
+    }
+}
+
+// Dispatching the actions used by all aspect of the app (Login)
+export const loginInitiate = (email, password) => {
+    return function (dispatch) {
+        dispatch(loginStart());
+        signInWithEmailAndPassword(auth, email, password)
+            .then((user) => {                
+                // updateProfile(auth.currentUser, {
+                //     displayName
+                // })
+                dispatch(loginSuccess(user))
+            })
+            .catch((error) => dispatch(loginFail(error.message)))
     }
 }
