@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 import { auth } from '../firebase';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
 
 
 // Creating all actions related to registering a user
@@ -33,6 +33,21 @@ const loginFail = (error) => ({
     payload: error,
 });
 
+// creating actions for logging out users
+const logoutStart = () => ({
+    type: types.LOGOUT_START,
+});
+
+const logoutSuccess = (user) => ({
+    type: types.LOGOUT_SUCCESS,
+    payload: user,
+});
+
+const logoutFail = (error) => ({
+    type: types.LOGOUT_FAIL,
+    payload: error,
+});
+
 // dispatching the actions to be used by all aspects of the app
 export const registerInitiate = (email, password, displayName) => {
     return function (dispatch) {
@@ -60,5 +75,17 @@ export const loginInitiate = (email, password) => {
                 dispatch(loginSuccess(user))
             })
             .catch((error) => dispatch(loginFail(error.message)))
+    }
+}
+
+
+// Dispatching the actions used by all aspect of the app (logout)
+export const logoutInitiate = () => {
+    return function (dispatch) {
+        dispatch(logoutStart());
+        
+        signOut(auth)
+            .then((resp) => dispatch(logoutSuccess()))
+            .catch((error) => dispatch(logoutFail(error.message)));
     }
 }

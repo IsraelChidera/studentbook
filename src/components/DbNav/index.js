@@ -3,8 +3,19 @@ import './Dbnav.css';
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutInitiate } from '../../redux/actions';
 
-const index = () => {
+const Index = () => {
+    const { currentUser } = useSelector((state) => state.user);
+    const dispatch = useDispatch(); 
+    
+    const handleAuth =  () => {
+        console.log("Sucees but ..")
+        if(currentUser) {
+            dispatch(logoutInitiate());
+        }        
+    }
   return ( 
         <section className="dbnav">
             <div>
@@ -36,7 +47,9 @@ const index = () => {
                 </div>
 
                 <div className="dbLogout">
-                    <button>
+                    <button                        
+                        onClick={handleAuth}
+                    >
                         Logout
                     </button>
                 </div>
@@ -45,4 +58,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;
