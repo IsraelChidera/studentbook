@@ -4,7 +4,7 @@ import showcaseBackground from '../../assets/featuresSvg.svg';
 
 const index = () => {
   return (
-    <section className="features">
+    <section id="features" className="features">
         <div>
             <div className="featuresTitle">
                 <h2>

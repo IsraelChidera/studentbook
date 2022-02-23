@@ -6,7 +6,7 @@ import { AiOutlineFacebook } from 'react-icons/ai';
 
 const index = () => {
   return (
-        <section className="contact">
+        <section id="contact" className="contact">
             <div
                 style={{
                     backgroundImage: `url(${showcaseBackground})`          

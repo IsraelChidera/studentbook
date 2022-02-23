@@ -4,7 +4,7 @@ import { AiFillAmazonSquare } from 'react-icons/ai';
 
 const index = () => {
   return (
-        <section className="how">
+        <section id="how" className="how">
             <div className="howtitle">
                 <p>
                     services

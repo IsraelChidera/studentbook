@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import '../../index.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { NavHashLink as Links} from 'react-router-hash-link';
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -12,30 +13,42 @@ const Navbar = () => {
   return (
     <nav>
         <div className="logo">
-            <Link to="/">
+            <Links to="/">
                 STUDENT
                 <span className="showcaseTitle">BOOK</span>
                 <span className="showcaseTitle2">.</span>
-            </Link>
+            </Links>
         </div>
 
         <ul>
             <li>
-                <a href="#">
+                <Links 
+                    to="/#features"
+                    activeClassName="selected"
+                    activeStyle={{ color: 'red' }}
+                >
                     Why StudentBook?
-                </a>
+                </Links>
             </li>
 
             <li>
-                <a href="#">
+                <Links 
+                    to="/#how"
+                    activeClassName="selected"
+                    activeStyle={{ color: 'red' }}    
+                >
                     How it works?
-                </a>
+                </Links>
             </li>  
 
             <li>
-                <a href="#">
+                <Links 
+                    to="/#contact"
+                    activeClassName="selected"
+                    activeStyle={{ color: 'red' }}    
+                >
                     Contact us
-                </a>
+                </Links>
             </li> 
         </ul>
 

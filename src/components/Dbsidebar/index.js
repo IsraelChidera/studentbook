@@ -15,9 +15,9 @@ const index = () => {
                     <NavLink 
                         to="/dashboard"
                         style={({ isActive }) => ({
-                            color: isActive ? '#fff' : '#545e6f',
-                            background: isActive ? '#1f2b36' : '#f0f0f0',
-                          })}
+                            color: isActive ? '#f6f6f6' : '#a01d1d',                            
+                            textDecoration: isActive ? 'underline' : 'none'
+                        })}
                     >
                         < MdDashboardCustomize className="icon" /> {" "}
                         My Dashboard
@@ -28,9 +28,9 @@ const index = () => {
                     <NavLink 
                         to="/dashboard/courses"
                         style={({ isActive }) => ({
-                            color: isActive ? '#fff' : '#545e6f',
-                            background: isActive ? '#1f2b36' : '#f0f0f0',
-                          })}
+                            color: isActive ? '#a01d1d' : '#f6f6f6',                            
+                            textDecoration: isActive ? 'underline' : 'none'
+                        })}
                     >
                         < GiBookshelf className="icon" /> {" "}
                         My courses
@@ -41,9 +41,9 @@ const index = () => {
                     <NavLink 
                         to="/dashboard/materials"
                         style={({ isActive }) => ({
-                            color: isActive ? '#fff' : '#545e6f',
-                            background: isActive ? '#1f2b36' : '#f0f0f0',
-                          })}
+                            color: isActive ? '#a01d1d' : '#f6f6f6',                            
+                            textDecoration: isActive ? 'underline' : 'none'
+                        })}
                     >
                         < MdLibraryBooks className="icon" /> {" "}
                         My Materials
@@ -51,7 +51,13 @@ const index = () => {
                 </li>
 
                 <li>
-                    <NavLink to="/dashboard/todos">
+                    <NavLink 
+                        to="/dashboard/todos"
+                        style={({ isActive }) => ({
+                            color: isActive ? '#a01d1d' : '#f6f6f6',                            
+                            textDecoration: isActive ? 'underline' : 'none'
+                        })}    
+                    >
                         < FaClipboardList className="icon"/> {" "}
                         Todo List
                     </NavLink>
