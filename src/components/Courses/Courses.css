@@ -47,4 +47,30 @@
 .courseResultsDiv {
     background: var(--primary);
     padding: 1rem;
+    margin: 1rem 0;
+}
+
+.courseResultsHeading {
+    text-align: center;
+    margin-bottom: 1rem;
+    background: var(--primary);
+    padding: 1rem;
+}
+
+.courseResultPara {
+    text-align: center;
+    font-size: 14px;
+}
+
+.courseResultsBtn {
+    text-align: right;
+}
+
+.courseResultsDiv h3 {
+    font-size: 1rem;
+}
+
+.courseResultsDiv p {
+    font-size: 13px;
+    padding: 2px 0;
 }

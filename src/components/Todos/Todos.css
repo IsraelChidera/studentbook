@@ -58,4 +58,30 @@
 .todoResultsDiv {
     background: var(--primary);
     padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.todoResultsDiv h3 {
+    font-size: 0.9rem;
+}
+
+.todoResultsDiv p {
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.scheduleHeading {
+    background: var(--primary);
+    margin-bottom: 1rem;
+    padding: 10px 2px;
+    text-align: center;
+}
+
+.todoResultsBtn {
+    text-align: right;
+}
+
+.todoResultPara {
+    text-align: center;
+    font-size: 14px;
 }

@@ -1,14 +1,56 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Courses.css';
 import DbNav from '../DbNav';
 import Dbsidebar from '../Dbsidebar';
+import { AiFillDelete } from 'react-icons/ai';
 
-const index = () => {
+const Index = () => {
+    var store = require('store'); 
+    const [courseValue, setCourseValue] = useState("");
+    const [year, setYear] = useState("");
+    const [units, setUnits] = useState("");
+    const [course, setCourse] = useState(()=>{
+        const saved = store.get('course');
+        if(saved){
+            return saved
+        }else {
+            return []
+        }
+    })
+
+    const handleAddCourse = (e) => {
+        e.preventDefault();
+
+        const date = new Date();
+        const time = date.getTime();
+
+        let todoObject = {
+            ID: time,
+            CourseValue: courseValue,
+            Year: year,
+            Units: units
+        }
+
+        setCourse([...course, todoObject]);
+        setCourseValue("");
+        setYear([]);
+        setUnits([]);
+    }
+
+    const handleDelete = (ID) => {
+        const deleteTask = course.filter((cos) => cos.ID !== ID);
+        setCourse(deleteTask);
+    }
+    
+    useEffect(()=> {
+        store.set("course", course)
+    }, [course])
+
   return (
     <section>
         
         < DbNav />
-        
+         
         <div className="dbGrid coursesDetails">
             < Dbsidebar />
             <div className="coursesTodo">
@@ -23,66 +65,80 @@ const index = () => {
                         </p>
                     </div>
 
-                    <form>
+                    <form
+                        onSubmit={handleAddCourse}
+                    >
                         <div>
                             <input 
                                 type="text"
                                 placeholder='Add a course'
+                                value={courseValue}
+                                onChange={(e)=>setCourseValue(e.target.value)}
                             />  
                         </div>
 
                         <div>
-                            <select>
-                                <option>
+                            <select
+                                value={year}
+                                onChange={(e)=>setYear(e.target.value)}
+                            >
+                                <option value="firstYear">
                                     First Year
                                 </option>
 
-                                <option>
+                                <option value="secondYear">
                                     Second Year
                                 </option>
 
-                                <option>
+                                <option value="thirdYear">
                                     Third Year
                                 </option>
 
-                                <option>
+                                <option value="fourthYear">
                                     Fourth Year
                                 </option>
 
-                                <option>
+                                <option value="fifthYear">
                                     Fifth Year
                                 </option>
 
-                                <option>
-                                    Carry Over
+                                <option value="extraYear">
+                                    Extra Year
                                 </option>
                             </select>
                         </div>
 
                         <div>
-                            <select>
-                                <option>
+                            <select
+                                value={units}
+                                onChange={(e)=>setUnits(e.target.value)}
+                            >
+                                <option value="oneUnit">
                                     1 unit
                                 </option>
 
-                                <option>
+                                <option value="twoUnit">
                                     2 unit
                                 </option>
 
-                                <option>
+                                <option value="threeUnit">
                                     3 unit
                                 </option>
 
-                                <option>
+                                <option value="fourUnit">
                                     4 unit
                                 </option>
 
-                                <option>
+                                <option value="fiveUnit">
                                     5 unit
                                 </option>
 
-                                <option>
+                                <option value="sixUnit">
                                     6 unit
+                                </option>
+
+                                <option value="others">
+                                    greater than 6 unit
                                 </option>
                             </select>
                         </div>
@@ -96,23 +152,35 @@ const index = () => {
                 </div>
 
                 <div className="courseResults">
-                    <div className="courseResultsDiv">
-                        <div>
-                            <h3>Course Name</h3>
-                            <p>
-                                First Year
-                            </p>
-                            <p>
-                                2 units
-                            </p>
-                        </div>
-
-                        <div>
-                            <button>
-                                Delete
-                            </button>    
-                        </div>
+                    <div className="courseResultsHeading">
+                        <h3>
+                            Courses
+                        </h3>
                     </div>
+                    {course.length>0? course.map((cos, i)=> (
+                        <div className="courseResultsDiv" key={cos.ID}>                        
+                            <div>
+                                <h3>{cos.CourseValue}</h3>
+                                <p>
+                                    {cos.Year}
+                                </p>
+                                <p>
+                                    2 units
+                                </p>
+                            </div>
+
+                            <div className="courseResultsBtn">
+                                <button
+                                    onClick={()=>handleDelete(cos.ID)}
+                                >
+                                    <AiFillDelete/>
+                                </button>    
+                            </div>
+                        </div>
+                    )): (<p className="courseResultPara">
+                            No course added yet. Please add one now...
+                        </p>)}
+                    
                 </div>
             </div>
         </div>
@@ -120,4 +188,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
