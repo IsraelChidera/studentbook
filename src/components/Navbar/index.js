@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav>
         <div className="logo">
-            <Links to="/">
+            <Links to="#home">
                 STUDENT
                 <span className="showcaseTitle">BOOK</span>
                 <span className="showcaseTitle2">.</span>

@@ -1,6 +1,6 @@
 .showcase {
     position: relative;
-    margin-top: 0rem;
+    padding-top: 5rem;
 }
 
 .showcaseBlock {
@@ -31,7 +31,7 @@
 
 .showcaseDetails {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 6rem;
     display: flex;
     flex-direction: column;

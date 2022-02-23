@@ -76,7 +76,7 @@ const Index = () => {
                 </h1>
 
                 <form
-                    onSubmit={handleSubmit}
+                    onSubmit={handleSubmit}                    
                 >
                     <div className="formDetails">
                         <div>

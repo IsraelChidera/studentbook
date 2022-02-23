@@ -6,7 +6,7 @@ import {AiOutlineFacebook} from 'react-icons/ai';
 
 const index = () => {
   return (
-    <section className="showcase">
+    <section id="home" className="showcase">
       <div className="showcaseImgSection">
         <div className="showcaseBlock"></div>
 

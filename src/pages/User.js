@@ -6,7 +6,7 @@ const User = () => {
   return (
     <section className="user">
         < Login />
-        < Register />
+        {/* < Register /> */}
     </section>
   );
 };
