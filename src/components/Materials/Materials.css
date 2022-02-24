@@ -14,3 +14,11 @@
     padding-top: 1rem;
     font-size: 14px;
 }
+
+@media screen and (max-width: 960px) {
+    .materialsTodo {        
+        margin: 3rem 4rem;
+        padding: 2rem 2rem 2rem 2rem;
+        border: 1px dotted #fff;
+    }
+}

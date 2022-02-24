@@ -81,3 +81,42 @@
     font-size: 13px;
     padding: 2px 0;
 }
+
+@media screen and (max-width: 960px) {
+    .coursesTodo {
+        /* margin-left: 210px; */
+        margin: 2rem;
+        padding: 2rem 2rem 2rem 2rem;
+        display: block;
+        grid-template-columns: 1.5fr 2fr;
+        grid-gap: 3rem;
+    }
+
+    .dbProfile {
+        display: block;        
+    }
+
+    .dbSearch {
+        display: none;
+    }
+
+    .dbLogout {
+        padding-left: 0px;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    .dbLogout button {
+        width: 100%;
+    }
+
+    .dbnav {       
+        padding-left: 4rem;      
+    }
+
+    
+
+    .coursesDetails {
+        padding-top: 3.5rem;        
+    }
+}

@@ -136,3 +136,17 @@
 .signUpBtn button:hover {
     background: var(--secondary);
 }
+
+@media screen and (max-width: 960px) {
+    .register {
+        display: block;    
+        position: relative;
+    }
+
+    .registerFlexed {        
+        position: absolute;
+        top: 8%;
+        left: 0;
+        width: 100%;
+    }
+}

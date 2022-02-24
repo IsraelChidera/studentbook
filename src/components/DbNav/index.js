@@ -5,20 +5,24 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutInitiate } from '../../redux/actions';
+import {GiHamburgerMenu} from 'react-icons/gi';
 
 const Index = () => {
     const { currentUser } = useSelector((state) => state.user);
     const dispatch = useDispatch(); 
     
-    const handleAuth =  () => {
-        console.log("Sucees but ..")
+    const handleAuth =  () => {        
         if(currentUser) {
             dispatch(logoutInitiate());
         }        
     }
+
   return ( 
         <section className="dbnav">
             <div>
+                <p>
+                    <GiHamburgerMenu/>
+                </p>
                 <h1>
                     <Link to="/">
                         STUDENT
@@ -36,7 +40,7 @@ const Index = () => {
                     </span>
                 </div>
 
-                <div>
+                <div className="dbSearch">
                     <form>
                         < AiOutlineSearch />
                         <input 

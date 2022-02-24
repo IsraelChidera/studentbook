@@ -15,11 +15,24 @@
     flex: 5;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     text-align: center;
 }
 
 .aboutFlexed2 h2 {
     font-size: 2.3rem;
     color: var(--tertiary);
+}
+
+@media screen and (max-width: 960px) {
+    .aboutFlexed {
+        display: block;
+        padding: 6rem 2rem;
+    }
+
+    .aboutFlexed2 {
+        padding-top: 3rem;
+        display: block;        
+        text-align: left;
+    }
 }

@@ -39,3 +39,20 @@
     opacity: 0.8;
     font-size: 14px;
 }
+
+@media screen and (max-width: 960px) {
+    .howtitle h1 {
+        font-size: 1.5rem;
+    }
+
+    .howGrid {
+        display: block;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem 2rem;
+        grid-gap: 4rem;
+    }
+
+    .howGrid .gridBox {
+        margin-bottom: 2.3rem;
+    }
+}

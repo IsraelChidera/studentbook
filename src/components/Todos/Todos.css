@@ -92,3 +92,19 @@
     text-align: center;
     font-size: 14px;
 }
+
+@media screen and (max-width: 960px) {
+    .todoTodo {
+        margin: 2rem;
+        padding: 2rem 2rem 2rem 2rem;
+        display: block;       
+    }
+
+    .todoResults {
+        margin-top: 4rem;
+    }
+
+    .todoDetails {
+        padding-top: 4rem;        
+    }
+}

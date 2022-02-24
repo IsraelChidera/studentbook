@@ -63,3 +63,42 @@
     background-color: brown;
     height: 10px;
 }
+
+@media screen and (max-width: 960px) {
+    .features {
+        margin: 0;
+        padding: 0rem 0;
+    }
+
+    .featuresTitle {
+        width: 100%;
+        padding-left: 0rem;
+        padding: 2rem;
+        position: relative;
+    }
+
+    .featuresTitleImg {        
+        height: 38vh;       
+    }
+
+    .featuresFlexed {
+        display: block;     
+        margin-top: 0rem;
+    }
+
+    .featuresImg {
+        height: 100vh;
+        width: 100%;
+        margin-top: 2rem;        
+    }
+
+    .featuresGrid {
+        display: block;
+        padding: 0 3rem;
+    }
+
+    .grid {       
+        padding: 1rem;
+    }
+    
+}
