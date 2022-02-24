@@ -2,20 +2,21 @@ import React, { useEffect } from 'react';
 import './Dbdetails.css';
 import { BsFillJournalBookmarkFill } from 'react-icons/bs';
 import { AiFillRightCircle } from 'react-icons/ai';
+import {auth} from '../../firebase';
 
 const index = () => {
     const today = new Date();
     const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
-    console.log(date)
-
+    console.log("auth", auth)
+    const auth = auth();
    
   return (
         <section className="dbDetailsGrid">
             <div className="dbDetailsContainer">
                 <div className="dbDetailsTitle">
                     <h1>
-                        Welcome, Israel
+                        Welcome, {auth.currentUser}
                     </h1>
                     <p>
                         What are your plans for today?
@@ -91,7 +92,7 @@ const index = () => {
                     {" "} 
                     <span className="reminder-icon">
                         < BsFillJournalBookmarkFill />
-                    </span>
+                    </span> 
                 </p>
             </div>
         </section>

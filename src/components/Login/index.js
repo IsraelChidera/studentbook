@@ -15,7 +15,7 @@ const Index = () => {
     
     const { currentUser } = useSelector((state) => state.user);
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         if(currentUser) {

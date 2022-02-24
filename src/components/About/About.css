@@ -30,9 +30,17 @@
         padding: 6rem 2rem;
     }
 
+    .aboutFlexed1 p {
+        font-size: 13px;
+    }
+
     .aboutFlexed2 {
         padding-top: 3rem;
         display: block;        
         text-align: left;
+    }
+
+    .aboutFlexed2 p {
+        font-size: 14px;
     }
 }
