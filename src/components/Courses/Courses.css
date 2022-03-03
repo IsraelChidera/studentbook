@@ -92,29 +92,7 @@
         grid-gap: 3rem;
     }
 
-    .dbProfile {
-        display: block;        
-    }
 
-    .dbSearch {
-        display: none;
-    }
-
-    .dbLogout {
-        padding-left: 0px;
-        margin-top: 1rem;
-        display: none;
-    }
-
-    .dbLogout button {
-        width: 100%;
-    }
-
-    .dbnav {       
-        padding-left: 4rem;      
-    }
-
-    
 
     .coursesDetails {
         padding-top: 3.5rem;        

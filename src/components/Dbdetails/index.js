@@ -3,20 +3,41 @@ import './Dbdetails.css';
 import { BsFillJournalBookmarkFill } from 'react-icons/bs';
 import { AiFillRightCircle } from 'react-icons/ai';
 import {auth} from '../../firebase';
+import { useNavigate  } from 'react-router-dom';
 
-const index = () => {
+const Index = () => {
+    var store = require('store');  
+    let navigate = useNavigate();
     const today = new Date();
     const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    const savedCourses = store.get('course')
+    const savedTodos = store.get('Todos');  
+    console.log(auth.currentUser.displayName)
+    // NEWCOM598
+    useEffect(()=> {             
+        console.log("saved", savedTodos)
+        console.log("saved couse", savedCourses);        
+    }, [])
+    
+    
+    const handleCourseClick = () => {
+        navigate("/dashboard/courses", { replace: true });
+    }
 
-    console.log("auth", auth)
-    const auth = auth();
+    const handleTodoClick = () => {
+        navigate("/dashboard/todos", { replace: true });
+    }
+
+    const handleMaterialClick = () => {
+        navigate("/dashboard/materials", { replace: true });
+    }
    
   return (
         <section className="dbDetailsGrid">
             <div className="dbDetailsContainer">
                 <div className="dbDetailsTitle">
                     <h1>
-                        Welcome, {auth.currentUser}
+                    Welcome, {auth.currentUser.displayName}
                     </h1>
                     <p>
                         What are your plans for today?
@@ -28,13 +49,52 @@ const index = () => {
                         <h3>
                             Courses
                         </h3>
-                        <div className="dbCoursesBg">
-                            <p>
-                                You have added no courses yet
-                            </p>
+                        <div className="dbCoursesBg">                            
 
-                            <button>
+                            {savedCourses.map((cos)=>(
+                                <ul key={cos.ID}>
+                                    <li>
+                                        {cos.CourseValue} {" "}
+                                        {"("+ cos.Units + ")" }
+                                    </li>
+
+                                    <p>
+                                        {
+                                            cos.Year
+                                        }
+                                    </p>
+                                </ul>
+                            ))}
+
+                            <button onClick={handleCourseClick}>
                                 Add course < AiFillRightCircle />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="dbTodo">
+                        <h3>
+                            Add a new Schedule
+                        </h3>
+
+                        <div className="dbCoursesBg">                            
+
+                            {
+                                savedTodos.map((todo) => (
+                                    <ul>
+                                        <li>
+                                            {todo.TodoValue}
+                                        </li>
+                                        
+                                        <p>
+                                            {todo.Tags}
+                                        </p>
+                                    </ul>                                    
+                                ))
+                            }
+
+                            <button onClick={handleTodoClick}>
+                                Add todo < AiFillRightCircle />
                             </button>
                         </div>
                     </div>
@@ -48,25 +108,8 @@ const index = () => {
                                 You have no media files added yet
                             </p>
 
-                            <button>
+                            <button onClick={handleMaterialClick}>
                                 Add materials < AiFillRightCircle />
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="dbTodo">
-                        <h3>
-                            Add a new Schedule
-                        </h3>
-
-                        <div className="dbCoursesBg">
-                            <p>
-                                Schedule your day now.
-                                Add a new todo list
-                            </p>
-
-                            <button>
-                                Add todo < AiFillRightCircle />
                             </button>
                         </div>
                     </div>
@@ -99,4 +142,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;

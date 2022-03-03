@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dbsidebar.css';
 import { GiBookshelf } from 'react-icons/gi';
 import { MdLibraryBooks } from 'react-icons/md';
 import { MdRateReview } from 'react-icons/md';
 import { FaClipboardList } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom';
-import { MdDashboardCustomize } from "react-icons/md";
+import { MdDashboardCustomize } from "react-icons/md"; 
+// import {handleClickHam} from '../DbNav';
 
-const index = () => {
+const index = ({handleClickHam}) => {
+    // const [click, setClick] = useState(false);
   return (
-        <section className="dbSidebar">
+        <section 
+            // className="dbSidebar"
+            className={handleClickHam? "dbSidebar" : "Dnone"}
+        >
             <ul>
                 <li>                                   
                     <NavLink 

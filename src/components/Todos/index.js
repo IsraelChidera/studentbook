@@ -88,8 +88,13 @@ const Index = () => {
                                 </label>
                                 <select
                                     value={todoTags}
-                                    onChange={(e)=>setTodoTags(e.target.value)}                            
+                                    onChange={(e)=>setTodoTags(e.target.value)} 
+                                    required                           
                                 >
+                                    <option value="select tag">
+                                        Select tag
+                                    </option>
+
                                     <option value="entertainment">
                                         Entertainment
                                     </option>
@@ -144,7 +149,7 @@ const Index = () => {
                                 <div>
                                     <h3>{todo.TodoValue}</h3>
                                     <p>
-                                        {todo.Tags}
+                                        {todo.Tags} 
                                     </p>                                
                                 </div>
 

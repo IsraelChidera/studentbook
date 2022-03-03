@@ -37,8 +37,7 @@
     background: none;
     outline: transparent;
     color: #f6f6f6;
-    padding: 0 5px 0 0;
-    margin-right: ;
+    padding: 0 5px 0 0;    
 }
 
 .dbLogout {
@@ -59,8 +58,87 @@
     transition: 0.3s all ease;
 }
 
+.hamburger {
+    display: none;
+}
+
+.dbLogoutFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dbLogout button {
+    width: 100%;
+}
+
+.none2 button {
+    padding: 10px 15px 10px 15px;
+    background: var(--tertiary);
+    color: #f6f6f6;
+    border: none;
+}
+
+.none2 button {
+    width: 100%;
+}
+
+.none2 {
+    padding-left: 10px;
+}
+
 @media screen and (max-width: 960px) {
     .dbnav {        
-        align-items: center;      
+        align-items: center;  
+        padding-left: 0;  
+        padding: 1rem;  
     }
+
+    .hamburger {
+        display: flex;    
+        justify-content: center;
+        margin-right: 1rem;
+        align-items: center;
+    }
+
+    .hamLogo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+    }
+
+    .dbID {
+        cursor: pointer;
+    }
+    
+    .none {
+        display: none;
+    }
+
+    .none2 {
+        display: none;
+    }
+
+    .dbProfile {
+        display: block;        
+    }
+    
+    .dbSearch {
+        display: none;
+    }
+    
+    .dbLogout {
+        padding-left: 0px;
+        margin-top: 1rem;
+        /* display: none; */
+        padding-left: 0px;
+        margin-top: 1rem;
+        /* display: none; */
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    
 }

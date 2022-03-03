@@ -74,6 +74,7 @@ const Index = () => {
                                 placeholder='Add a course'
                                 value={courseValue}
                                 onChange={(e)=>setCourseValue(e.target.value)}
+                                required
                             />  
                         </div>
 
@@ -81,24 +82,29 @@ const Index = () => {
                             <select
                                 value={year}
                                 onChange={(e)=>setYear(e.target.value)}
+                                required
                             >
-                                <option value="firstYear">
+                                <option value="select year">
+                                    Select Year
+                                </option>
+
+                                <option value="first year">
                                     First Year
                                 </option>
 
-                                <option value="secondYear">
+                                <option value="second year">
                                     Second Year
                                 </option>
 
-                                <option value="thirdYear">
+                                <option value="third year">
                                     Third Year
                                 </option>
 
-                                <option value="fourthYear">
+                                <option value="fourth year">
                                     Fourth Year
                                 </option>
 
-                                <option value="fifthYear">
+                                <option value="fifth year">
                                     Fifth Year
                                 </option>
 
@@ -112,28 +118,33 @@ const Index = () => {
                             <select
                                 value={units}
                                 onChange={(e)=>setUnits(e.target.value)}
+                                required
                             >
-                                <option value="oneUnit">
+                                <option value="selectUnit">
+                                    Select unit
+                                </option>
+
+                                <option value="one unit">
                                     1 unit
                                 </option>
 
-                                <option value="twoUnit">
+                                <option value="two unit">
                                     2 unit
                                 </option>
 
-                                <option value="threeUnit">
+                                <option value="three unit">
                                     3 unit
                                 </option>
 
-                                <option value="fourUnit">
+                                <option value="four unit">
                                     4 unit
                                 </option>
 
-                                <option value="fiveUnit">
+                                <option value="five unit">
                                     5 unit
                                 </option>
 
-                                <option value="sixUnit">
+                                <option value="six unit">
                                     6 unit
                                 </option>
 
