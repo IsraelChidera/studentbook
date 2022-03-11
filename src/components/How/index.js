@@ -1,8 +1,12 @@
 import React from 'react';
 import './How.css';
 import { AiFillAmazonSquare } from 'react-icons/ai';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const index = () => {
+    AOS.init();
+
   return (
         <section id="how" className="how">
             <div className="howtitle">
@@ -15,7 +19,7 @@ const index = () => {
             </div>
 
             <div className="howGrid">
-                <div className="gridBox">
+                <div data-aos="fade-right" data-aos-duration="1000" className="gridBox">
                     <div>
                         <AiFillAmazonSquare/>
                     </div>
@@ -35,7 +39,7 @@ const index = () => {
                     </div>
                 </div>
 
-                <div className="gridBox">
+                <div data-aos="fade-left" data-aos-duration="1000" className="gridBox">
                     <div>
                         <AiFillAmazonSquare/>
                     </div>
@@ -55,7 +59,7 @@ const index = () => {
                     </div>
                 </div>
 
-                <div className="gridBox">
+                <div data-aos="fade-right" data-aos-duration="1000" className="gridBox">
                     <div>
                         <AiFillAmazonSquare/>
                     </div>
@@ -75,7 +79,7 @@ const index = () => {
                     </div>
                 </div>
 
-                <div className="gridBox">
+                <div data-aos="fade-left" data-aos-duration="1000" className="gridBox">
                     <div>
                         <AiFillAmazonSquare/>
                     </div>

@@ -136,4 +136,8 @@
     .showcaseImageCorner {        
         bottom: 4%;        
     }
+
+    .showcase {        
+        padding-top: 0rem;
+    }
 }

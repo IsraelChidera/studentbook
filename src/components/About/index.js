@@ -1,12 +1,16 @@
 import React from 'react';
 import './About.css';
 import '../../index.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const index = () => {
+const Index = () => {
+    AOS.init();
+
   return (
     <section className="about">
         <div className="aboutFlexed">
-            <div className="aboutFlexed1">
+            <div data-aos="fade-up" data-aos-duration="1000" className="aboutFlexed1">
                 <h1>
                     The result
                 </h1>
@@ -29,7 +33,7 @@ const index = () => {
                 </p>
             </div>
 
-            <div className="aboutFlexed2">
+            <div data-aos="fade-right" data-aos-duration="1000" className="aboutFlexed2">
                 <div>
                     <h2>
                         25
@@ -65,4 +69,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

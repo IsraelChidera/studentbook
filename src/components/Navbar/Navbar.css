@@ -18,7 +18,6 @@ nav ul {
 }
 
 ul li {
-    /* list-style: none; */
     padding-right: 1.4rem;
 }
 
@@ -30,13 +29,15 @@ nav ul li a {
     position: relative;
 }
 
+.linksList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
-/* nav ul li a:hover {
-    transition: all 3s;
-    text-decoration: underline;
-    text-underline-offset: 6px;
-} */
+.linksList ul li {
+    padding-right: 3rem;
+}
 
 nav ul li a:after {
     border-radius: 1em;
@@ -85,10 +86,25 @@ nav ul li a:hover:after {
     transition: all 0.3s ease-in;
 }
 
+.ham {
+    display: none;
+}
+
+.none {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.none ul li {
+    padding-right: 2rem;
+}
+
 @media screen and (max-width: 960px) {
     nav {
-        display: block;
+        display: flex;
         padding: 1rem 0 1rem 1rem;
+        position: relative;
     }
 
     nav ul {
@@ -98,4 +114,33 @@ nav ul li a:hover:after {
     .clientLogin {
         display: block;        
     }
+
+    .linksList {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background: var(--primary);
+        top: 3rem;
+        height: 100vh;
+        right: 0rem;        
+        padding: 3rem 1rem;     
+        transition: all 0.3s;
+    }
+
+    .linksList li {
+        list-style: none;
+        padding: 2rem 0;
+    }
+
+    .ham {
+        display: block;
+        font-size: 18px;
+        padding-right: 1rem;
+        text-align: right;
+    }
+
+    .none {
+        display: none;
+    }
+    
 }

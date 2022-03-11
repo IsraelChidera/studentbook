@@ -1,8 +1,12 @@
 import React from 'react';
 import './Features.css';
 import showcaseBackground from '../../assets/featuresSvg.svg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const index = () => {
+const Index = () => {
+    AOS.init();
+
   return (
     <section id="features" className="features">
         <div>
@@ -30,7 +34,7 @@ const index = () => {
 
             <div className="featuresFlexed">
                 <div className="featuresGrid">
-                    <div className="grid">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="grid">
                         <h1>
                             1
                         </h1>
@@ -42,7 +46,7 @@ const index = () => {
                         </p>
                     </div>
 
-                    <div className="grid">
+                    <div data-aos="fade-left" data-aos-duration="1000" className="grid">
                         <h1>
                             2
                         </h1>
@@ -54,7 +58,7 @@ const index = () => {
                         </p>
                     </div>
 
-                    <div className="grid">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="grid">
                         <h1>
                             3
                         </h1>
@@ -66,7 +70,7 @@ const index = () => {
                         </p>
                     </div>
 
-                    <div className="grid">
+                    <div data-aos="fade-left" data-aos-duration="1000" className="grid">
                         <h1>
                             4
                         </h1>
@@ -80,6 +84,8 @@ const index = () => {
                 </div>
 
                 <div 
+                    data-aos="flip-left"
+                    data-aos-duration="1000"
                     className="featuresImg"                    
                 ></div>
             </div>
@@ -88,4 +94,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

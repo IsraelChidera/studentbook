@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Showcase.css';
 import showcaseBackground from '../../assets/showcaseImg.png';
 import {BsInstagram} from 'react-icons/bs';
 import {AiOutlineFacebook} from 'react-icons/ai';
+import { gsap } from "gsap";
 
-const index = () => {
+const Index = () => {
+
+  useEffect(()=>{
+    gsap.from('.showcaseDetails', {duration: 2, x: '-120%', ease: 'power2.in', delay: 1})
+    gsap.from('.showcaseImg', {duration: 3, y: '100%'})
+    // gsap.from('.showcaseImageCorner', {duration: 2, bottom:'-100%', ease: 'steps', delay: 1})
+  },[])
+
   return (
     <section id="home" className="showcase">
       <div className="showcaseImgSection">
@@ -63,4 +71,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
