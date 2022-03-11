@@ -17,7 +17,7 @@ const Index = () => {
                 }}
                 className="contactImg"
                 data-aos="zoom-in"
-                data-aos-duration="1000"
+                data-aos-duration="500"
             >
 
             </div>

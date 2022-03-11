@@ -9,7 +9,7 @@ const Index = () => {
 
   useEffect(()=>{
     gsap.from('.showcaseDetails', {duration: 2, x: '-120%', ease: 'power2.in', delay: 1})
-    gsap.from('.showcaseImg', {duration: 3, y: '100%'})
+    // gsap.from('.showcaseImg', {duration: 3, y: '100%'})
     // gsap.from('.showcaseImageCorner', {duration: 2, bottom:'-100%', ease: 'steps', delay: 1})
   },[])
 

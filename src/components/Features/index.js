@@ -83,9 +83,7 @@ const Index = () => {
                     </div>
                 </div>
 
-                <div 
-                    data-aos="flip-left"
-                    data-aos-duration="1000"
+                <div                     
                     className="featuresImg"                    
                 ></div>
             </div>
