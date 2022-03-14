@@ -30,9 +30,9 @@ const Index = () => {
       </div>
 
       <div className="showcaseDetails">
-        <div>
+        <div className="showcaseHeadings">
           <h1>
-            STUDENT
+            STUDENT {" "}
             <span className="showcaseTitle">BOOK</span>
             <span className="showcaseTitle2">.</span>
           </h1>

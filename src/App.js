@@ -12,7 +12,7 @@ import PuffLoader from 'react-spinners/PuffLoader';
 import { css } from "@emotion/react";
 import './index.css';
 
-function App() {
+function App() { 
     const override = css`
       
       

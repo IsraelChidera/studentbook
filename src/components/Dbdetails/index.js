@@ -51,7 +51,7 @@ const Index = () => {
                         </h3>
                         <div className="dbCoursesBg">                            
 
-                            {savedCourses.map((cos)=>(
+                            {savedCourses?.map((cos)=>(
                                 <ul key={cos.ID}>
                                     <li>
                                         {cos.CourseValue} {" "}
@@ -80,8 +80,8 @@ const Index = () => {
                         <div className="dbCoursesBg">                            
 
                             {
-                                savedTodos.map((todo) => (
-                                    <ul>
+                                savedTodos?.map((todo, i) => (
+                                    <ul key={i}>
                                         <li>
                                             {todo.TodoValue}
                                         </li>

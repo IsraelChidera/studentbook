@@ -6,6 +6,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerInitiate } from '../../redux/actions';
+import PuffLoader from 'react-spinners/PuffLoader';
 
 const Index = () => {
     const [state, setState] = useState({
@@ -13,6 +14,8 @@ const Index = () => {
         email: "",
         password: ""
     });
+
+    const [loading, setLoading] = useState(false);
 
     const { currentUser } = useSelector((state) => state.user);
 
@@ -34,12 +37,20 @@ const Index = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(registerInitiate(email, password, displayName)) 
-        setState({email: "", displayName: "", password: ""})
+        dispatch(registerInitiate(email, password, displayName)) ;
+        setLoading(true);
+        setState({email: "", displayName: "", password: ""});
     }
 
     return (
-        <section className="register">
+        <>
+            {
+                loading?
+                <div className="loader">
+                    <PuffLoader color={"#efefef"}  loading={loading} size={100} />
+                </div>
+                :
+                <section className="register">
             <div
                 style={{
                     backgroundImage: `url(${userAccessBg})`          
@@ -115,7 +126,16 @@ const Index = () => {
                             <div className="signUpBtn">
                                 <button                                    
                                 >
-                                    Sign Up
+                                   {loading? 
+                                        <p>
+                                            {/* <p>
+                                                <PuffLoader color={"#fff"}  loading={loading} size={100} />
+                                            </p> */}
+                                            <p>
+                                                Signing Up . . .
+                                            </p>
+                                        </p>: "Sign Up"
+                                    }
                                 </button>
                             </div>
                         </div>
@@ -148,6 +168,9 @@ const Index = () => {
                 </div>
             </div>
         </section>
+            }
+        </>
+        
     );
 };
 

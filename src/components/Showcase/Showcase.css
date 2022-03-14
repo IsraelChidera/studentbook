@@ -39,6 +39,10 @@
     justify-content: space-around;
 }
 
+.showcaseHeadings {
+
+} 
+
 .showcaseDetails h1 {
     font-size: 4rem;
 }
@@ -121,8 +125,13 @@
 
 @media screen and (max-width: 440px) {
     .showcaseDetails h1 {
-        font-size: 1.5rem;
+        line-height: 1;
+        font-size: 3.5rem;
     }
+
+    .showcaseHeadings {
+        width: 200px;
+    } 
 
     .showcaseDetails p {
         font-size: 14px;
@@ -139,5 +148,9 @@
 
     .showcase {        
         padding-top: 0rem;
+    }
+
+    .showcaseDetails {        
+        top: 35%;        
     }
 }
